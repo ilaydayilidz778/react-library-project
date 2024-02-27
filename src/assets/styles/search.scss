@@ -1,0 +1,38 @@
+.search-form {
+    width: 100%;
+    background-image: url('assest/img/library,jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+.search-form .search-form-elem {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.search-form .search-form-elem .form-control {
+    flex: 1;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: grey;
+}
+
+.search-form .search-form-elem .form-control::placeholder {
+    opacity: 0.9;
+}
+
+.search-form .search-form-elem .search-btn {
+    background: linear-gradient(135deg, #e6c6f5, #8a2be2);
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.search-form .search-form-elem .search-btn-icon {
+    color: white;
+}
