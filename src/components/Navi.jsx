@@ -4,7 +4,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import LibLogo from '../assets/img/navLogo.png';
 import '../assets/styles/navi.scss'
 
-const Navi = () => {
+const Navi = ({ data }) => {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
@@ -16,10 +16,11 @@ const Navi = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='ms-auto'>
-                            <Nav.Link href="#deets">Tüm Kategoriler</Nav.Link>
-                            <Nav.Link href="#deets">Edebiyat</Nav.Link>
-                            <Nav.Link href="#deets">Tarih</Nav.Link>
-                            <Nav.Link href="#deets">Diğer</Nav.Link>
+                            {
+                                data.map(kategori =>
+                                    <Nav.Link key={kategori.id} href={`#${kategori.id}`}>{kategori.kategoriAdi}</Nav.Link>
+                                )
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -1,8 +1,6 @@
-import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cards from './Cards'
 import '../assets/styles/cardList.scss'
-
 
 
 const CardList = ({ data }) => {

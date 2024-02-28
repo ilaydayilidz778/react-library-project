@@ -1,39 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Form, Button } from 'react-bootstrap';
-import '../assets/styles/form.scss'
+import '../assets/styles/form.scss';
 
-const Forms = () => {
+const Forms = ({ yeniKitapEkle }) => {
+    const [kitapAdi, setKitapAdi] = useState("");
+    const [kitapYazari, setKitapYazari] = useState("");
+    const [kitapKategorisi, setKitapKategorisi] = useState("Kategori Seçiniz");
+    const [kitapSayfaSayisi, setKitapSayfaSayisi] = useState(0);
+    const [kitapResmi, setKitapResmi] = useState("");
+    const [kitapAciklamasi, setKitapAciklamasi] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Kitap Başarıyla Eklendi!")
+        yeniKitapEkle({
+            kitapAdi: kitapAdi,
+            kitapYazari: kitapYazari,
+            kitapKategorisi: kitapKategorisi,
+            kitapSayfaSayisi: kitapSayfaSayisi,
+            kitapResmi: kitapResmi,
+            kitapAciklamasi: kitapAciklamasi
+        });
+        setKitapAdi("");
+        setKitapYazari("");
+        setKitapKategorisi("Kategori Seçiniz");
+        setKitapSayfaSayisi(0);
+        setKitapResmi("");
+        setKitapAciklamasi("");
+    };
+
     return (
         <div className="form-container">
             <Card className="custom-card">
                 <Card.Body>
-                    <Form>
+                    <Form onSubmit={handleSubmit}>
                         <Form.Group className="mb-3" controlId="formGroupKitapAdi">
                             <Form.Label className="form-label">Kitap Adı</Form.Label>
-                            <Form.Control type="text" placeholder="Kitap Adı" className="form-control" />
+                            <Form.Control value={kitapAdi} onChange={(e) => setKitapAdi(e.target.value)} type="text" placeholder="Kitap Adı" className="form-control" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formGroupKitapYazari">
                             <Form.Label className="form-label">Kitap Yazarı</Form.Label>
-                            <Form.Control type="text" placeholder="Yazar" className="form-control" />
+                            <Form.Control value={kitapYazari} onChange={(e) => setKitapYazari(e.target.value)} type="text" placeholder="Yazar" className="form-control" />
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label className="form-label">Kategori</Form.Label>
-                            <Form.Select defaultValue="" className="form-control">
-                                <option>Kategori Seçiniz</option>
+                            <Form.Select value={kitapKategorisi} onChange={(e) => setKitapKategorisi(e.target.value)} className="form-control">
+                                <option disabled>Kategori Seçiniz</option>
+                                <option>Yazılım</option>
+                                <option>Edebiyat</option>
+                                <option>Tarih</option>
+                                <option>Diğer</option>
                             </Form.Select>
                         </Form.Group>
                         <Form.Group controlId="formGroupSayfaSayisi" className="mb-3">
                             <Form.Label>Sayfa Sayısı</Form.Label>
-                            <Form.Control type="number" placeholder="Sayfa Sayısı" />
+                            <Form.Control value={kitapSayfaSayisi} onChange={(e) => setKitapSayfaSayisi(e.target.value)} type="number" placeholder="Sayfa Sayısı" />
                         </Form.Group>
                         <Form.Group controlId="formFile" className="mb-3">
-                            <Form.Label>Kitap Resmi Ekle</Form.Label>
-                            <Form.Control type="file" />
+                            <Form.Label>Kitap Resm Url Ekle</Form.Label>
+                            <Form.Control value={kitapResmi} onChange={(e) => setKitapResmi(e.target.value)} type="text" placeholder="Kitap Kapak Resmi Url" />
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Kitap Açıklaması</Form.Label>
-                            <Form.Control as="textarea" placeholder="Kitap Açıklaması" />
+                            <Form.Control value={kitapAciklamasi} onChange={(e) => setKitapAciklamasi(e.target.value)} as="textarea" placeholder="Kitap Açıklaması" />
                         </Form.Group>
                         <Button variant="primary" type="submit" className="btn-primary">
                             Kitap Ekle
@@ -43,6 +73,6 @@ const Forms = () => {
             </Card>
         </div>
     );
-}
+};
 
 export default Forms;
