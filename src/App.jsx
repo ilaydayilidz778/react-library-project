@@ -3,6 +3,7 @@ import CardList from './components/CardList'
 import Forms from './components/Form'
 import Navi from './components/Navi'
 import Search from './components/Search'
+import { data } from './assets/data/data'
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Navi />
       <Search />
       <Forms />
-      <CardList />
+      <CardList data={data} />
     </>
   )
 }
