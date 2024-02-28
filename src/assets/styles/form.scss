@@ -30,6 +30,11 @@
     border: none;
 }
 
+.btn-primary:disabled {
+    opacity: 0;
+    cursor: auto;
+}
+
 .btn-primary:hover {
     background-color: #6a1ab0;
 }

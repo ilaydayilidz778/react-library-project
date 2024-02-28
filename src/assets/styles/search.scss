@@ -1,24 +1,32 @@
 .search-form {
     width: 100%;
-    background-image: url('assest/img/searchBackground.png');
+    background: linear-gradient(rgba(141, 39, 174, 0.3), rgba(141, 39, 174, 0.5)), url('../img/searchBackground.png');
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 10px;
+    padding: 320px 0;
+    text-align: center;
+}
+
+.search-form-content {
+    display: inline-block;
+    text-align: center;
 }
 
 .search-form .search-form-elem {
     display: flex;
     align-items: center;
-    padding: 5px;
+    text-align: left;
+    margin-bottom: 30px;
 }
 
 .search-form .search-form-elem .form-control {
-    flex: 1;
-    font-size: 12px;
-    padding: 5px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    color: grey;
+    font-size: 1.6rem;
+    padding: 0.6rem;
+    border: 1px solid white;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    flex-grow: 1;
 }
 
 .search-form .search-form-elem .form-control::placeholder {
@@ -27,12 +35,24 @@
 
 .search-form .search-form-elem .search-btn {
     background: linear-gradient(135deg, #e6c6f5, #8a2be2);
-    border: none;
+    border: 1px solid white;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 0.9rem;
     border-radius: 5px;
 }
 
 .search-form .search-form-elem .search-btn-icon {
     color: white;
+}
+
+.search-form h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 44px;
+}
+
+.search-form p {
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
 }

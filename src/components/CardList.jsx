@@ -3,7 +3,7 @@ import Cards from './Cards'
 import '../assets/styles/cardList.scss'
 
 
-const CardList = ({ data }) => {
+const CardList = ({ data, seciliKitabiSil }) => {
     return (
         <section className='book-list'>
             <div className='card-list'>

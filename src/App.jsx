@@ -13,13 +13,19 @@ function App() {
 
   const yeniKitapEkle = (yeni) => {
     setKitaplik([...kitaplik, yeni]);
-  }
+  };
+
+  const seciliKitabiSil = (id) => {
+    const updatedKitaplik = kitaplik.filter(kitap => kitap.id !== id);
+    setKitaplik(updatedKitaplik);
+  };
+
   return (
     <>
       <Navi data={kategoriler} />
       <Search />
-      <Forms yeniKitapEkle={yeniKitapEkle} />
-      <CardList data={kitaplik} />
+      <Forms yeniKitapEkle={yeniKitapEkle} kitaplik={kitaplik} />
+      <CardList data={kitaplik} seciliKitabiSil={seciliKitabiSil} />
     </>
   )
 }

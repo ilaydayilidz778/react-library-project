@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Form, Button } from 'react-bootstrap';
+import defaultImage from '../assets/img/defaultImage.jpg';
 import '../assets/styles/form.scss';
 
-const Forms = ({ yeniKitapEkle }) => {
+const Forms = ({ yeniKitapEkle, kitaplik }) => {
     const [kitapAdi, setKitapAdi] = useState("");
     const [kitapYazari, setKitapYazari] = useState("");
     const [kitapKategorisi, setKitapKategorisi] = useState("Kategori Seçiniz");
@@ -13,13 +14,15 @@ const Forms = ({ yeniKitapEkle }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Kitap Başarıyla Eklendi!")
+        console.log("Kitap Başarıyla Eklendi!");
+        const resimUrl = kitapResmi !== "" ? kitapResmi : defaultImage;
         yeniKitapEkle({
+            id: kitaplik.length + 1,
             kitapAdi: kitapAdi,
             kitapYazari: kitapYazari,
             kitapKategorisi: kitapKategorisi,
             kitapSayfaSayisi: kitapSayfaSayisi,
-            kitapResmi: kitapResmi,
+            kitapResmi: resimUrl,
             kitapAciklamasi: kitapAciklamasi
         });
         setKitapAdi("");
@@ -65,7 +68,7 @@ const Forms = ({ yeniKitapEkle }) => {
                             <Form.Label>Kitap Açıklaması</Form.Label>
                             <Form.Control value={kitapAciklamasi} onChange={(e) => setKitapAciklamasi(e.target.value)} as="textarea" placeholder="Kitap Açıklaması" />
                         </Form.Group>
-                        <Button variant="primary" type="submit" className="btn-primary">
+                        <Button variant="primary" type="submit" className="btn-primary" disabled={kitapAdi === "" || kitapYazari === "" || kitapKategorisi === "Kategori Seçiniz" || kitapSayfaSayisi === 0 || kitapAciklamasi === ""}>
                             Kitap Ekle
                         </Button>
                     </Form>
