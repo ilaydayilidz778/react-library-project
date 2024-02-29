@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import LibLogo from '../assets/img/navLogo.png';
-import '../assets/styles/navi.scss'
+import '../assets/styles/navi.scss';
 
 const Navi = ({ data }) => {
     return (

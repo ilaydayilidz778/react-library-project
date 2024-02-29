@@ -3,12 +3,13 @@ import '../assets/styles/card.scss';
 import { AiOutlineDelete } from 'react-icons/ai'
 import { MdOutlineModeEdit } from 'react-icons/md'
 
-const maxLength = 170;
-const Cards = ({ kitap }) => {
+const Cards = ({ kitap, kitapSil }) => {
     return (
         <section key={kitap.id} className='book'>
             <div className='book-card'>
-                <button className='delete'><AiOutlineDelete /></button>
+                <button
+                    onClick={() => kitapSil(kitap.id)}
+                    className='delete'><AiOutlineDelete /></button>
                 <button className='edit'><MdOutlineModeEdit /></button>
                 <img src={kitap.kitapResmi} alt="kitap-kapak" />
                 <div className='book-card-body'>
@@ -17,9 +18,11 @@ const Cards = ({ kitap }) => {
                     <p><strong>Kitap Yazarı:</strong>{kitap.kitapYazari}</p>
                     <p><strong>Kitap Türü:</strong>{kitap.kitapKategorisi}</p>
                     <p><strong>Sayfa Sayısı:</strong>{kitap.kitapSayfaSayisi}</p>
-                    <p>
-                        <strong>Kitap Açıklaması:</strong>
-                        {kitap.kitapAciklamasi.length > 170 ? kitap.kitapAciklamasi.substring(0, kitap.kitapAciklamasi.substring(0, maxLength + 1).lastIndexOf(" ")) + "..." : kitap.kitapAciklamasi}
+                    <p>Kitap Açıklaması: {
+                        kitap.kitapAciklamasi.length > 170 ?
+                            kitap.kitapAciklamasi.substring(0, kitap.kitapAciklamasi.substring(0, 170).lastIndexOf(" ")) + "..." :
+                            kitap.kitapAciklamasi
+                    }
                     </p>
                 </div>
             </div>

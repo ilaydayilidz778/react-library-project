@@ -17,7 +17,7 @@ const Forms = ({ yeniKitapEkle, kitaplik }) => {
         console.log("Kitap Başarıyla Eklendi!");
         const resimUrl = kitapResmi !== "" ? kitapResmi : defaultImage;
         yeniKitapEkle({
-            id: kitaplik.length + 1,
+            id: kitaplik.length > 0 ? kitaplik[kitaplik.length - 1].id + 1 : 1,
             kitapAdi: kitapAdi,
             kitapYazari: kitapYazari,
             kitapKategorisi: kitapKategorisi,

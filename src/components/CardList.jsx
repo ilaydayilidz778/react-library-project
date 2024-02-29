@@ -3,13 +3,13 @@ import Cards from './Cards'
 import '../assets/styles/cardList.scss'
 
 
-const CardList = ({ data, seciliKitabiSil }) => {
+const CardList = ({ data, kitapSil }) => {
     return (
         <section className='book-list'>
             <div className='card-list'>
                 {
                     data.map(kitap =>
-                        <Cards key={kitap.id} kitap={kitap} />
+                        <Cards key={kitap.id} kitap={kitap} kitapSil={kitapSil} />
                     )
                 }
             </div>

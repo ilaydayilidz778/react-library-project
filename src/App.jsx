@@ -12,20 +12,20 @@ function App() {
   const [kategoriler, setKategoriler] = useState(dataKategoriler);
 
   const yeniKitapEkle = (yeni) => {
-    setKitaplik([...kitaplik, yeni]);
+    setKitaplik(prevKitaplik => [...prevKitaplik, yeni]);
   };
 
-  const seciliKitabiSil = (id) => {
-    const updatedKitaplik = kitaplik.filter(kitap => kitap.id !== id);
-    setKitaplik(updatedKitaplik);
-  };
+  const kitapSil = (id) => {
+    setKitaplik(prevKitaplik => prevKitaplik.filter(statedenGelen => statedenGelen.id !== id));
+
+  }
 
   return (
     <>
       <Navi data={kategoriler} />
       <Search />
       <Forms yeniKitapEkle={yeniKitapEkle} kitaplik={kitaplik} />
-      <CardList data={kitaplik} seciliKitabiSil={seciliKitabiSil} />
+      <CardList data={kitaplik} kitapSil={kitapSil} />
     </>
   )
 }
