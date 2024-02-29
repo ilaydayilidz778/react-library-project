@@ -35,6 +35,7 @@ const Forms = ({ yeniKitapEkle, kitaplik }) => {
 
     return (
         <div className="form-container">
+            <h1 className='form-title'>Kitap Ekleme Formu</h1>
             <Card className="custom-card">
                 <Card.Body>
                     <Form onSubmit={handleSubmit}>

@@ -1,8 +1,17 @@
 .form-container {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.form-title {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: lighter;
+    color: #6c757d;
+    text-decoration-color: #6c757d;
 }
 
 .card {

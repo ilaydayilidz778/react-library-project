@@ -10,6 +10,7 @@ function App() {
   // const[stateName, setStateName] = useState(initialValue)
   const [kitaplik, setKitaplik] = useState(data);
   const [kategoriler, setKategoriler] = useState(dataKategoriler);
+  const [arananKelime, setArananKelime] = useState('');
 
   const yeniKitapEkle = (yeni) => {
     setKitaplik(prevKitaplik => [...prevKitaplik, yeni]);
@@ -23,9 +24,9 @@ function App() {
   return (
     <>
       <Navi data={kategoriler} />
-      <Search />
+      <Search setArananKelime={setArananKelime} />
       <Forms yeniKitapEkle={yeniKitapEkle} kitaplik={kitaplik} />
-      <CardList data={kitaplik} kitapSil={kitapSil} />
+      <CardList data={kitaplik} kitapSil={kitapSil} arananKelime={arananKelime} />
     </>
   )
 }
