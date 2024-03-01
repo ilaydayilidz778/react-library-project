@@ -12,6 +12,7 @@ function App() {
   const [kitaplik, setKitaplik] = useState([]);
   const [kategoriler, setKategoriler] = useState([]);
   const [arananKelime, setArananKelime] = useState('');
+  const [seciliKategori, setSeciliKategori] = useState('');
 
   // kitapları api getirme
   const kitapGetir = async () => {
@@ -34,7 +35,6 @@ function App() {
     kategorileriGetir();
   }, [])
 
-
   const yeniKitapEkle = async (yeni) => {
     setKitaplik(prevKitaplik => [...prevKitaplik, yeni]);
     const url = "http://localhost:3005/kitaplar";
@@ -51,9 +51,20 @@ function App() {
     console.log(response);
   }
 
+  const filtreyeGoreKitaplariGetir = async (seciliKategori) => {
+    const url = `http://localhost:3005/kitaplar?kitapKategorisi=${seciliKategori}`;
+    const response = await axios.get(url);
+    setKitaplik(response.data);
+  }
+
+  useEffect(() => {
+    seciliKategori &&
+      filtreyeGoreKitaplariGetir(seciliKategori);
+  }, [seciliKategori]);
+
   return (
     <>
-      <Navi data={kategoriler} />
+      <Navi data={kategoriler} setSeciliKategori={setSeciliKategori} />
       <Search setArananKelime={setArananKelime} />
       <Forms yeniKitapEkle={yeniKitapEkle} kitaplik={kitaplik} />
       <CardList data={kitaplik} kitapSil={kitapSil} arananKelime={arananKelime} />
