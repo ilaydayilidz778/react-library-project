@@ -17,7 +17,7 @@ const Forms = ({ yeniKitapEkle, kitaplik }) => {
         console.log("Kitap Başarıyla Eklendi!");
         const resimUrl = kitapResmi !== "" ? kitapResmi : defaultImage;
         yeniKitapEkle({
-            id: kitaplik.length > 0 ? kitaplik[kitaplik.length - 1].id + 1 : 1,
+            id: kitaplik.length > 0 ? (Number(kitaplik[kitaplik.length - 1].id) + 1).toString() : "1",
             kitapAdi: kitapAdi,
             kitapYazari: kitapYazari,
             kitapKategorisi: kitapKategorisi,
@@ -35,7 +35,10 @@ const Forms = ({ yeniKitapEkle, kitaplik }) => {
 
     return (
         <div className="form-container">
-            <h1 className='form-title'>Kitap Ekleme Formu</h1>
+            <h1 className='form-title'>
+                Kitap Ekleme Formu
+                <hr />
+            </h1>
             <Card className="custom-card">
                 <Card.Body>
                     <Form onSubmit={handleSubmit}>
