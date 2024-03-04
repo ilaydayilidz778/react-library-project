@@ -1,49 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Form, Button } from 'react-bootstrap';
 import defaultImage from '../assets/img/defaultImage.jpg';
 import '../assets/styles/form.scss';
+import { useCol } from 'react-bootstrap/esm/Col';
+import DataContext from '../context/DataContext';
 
-const Forms = ({ yeniKitapEkleDuzenle, kitaplik, duzenlenecekKitap }) => {
-    const [kitapAdi, setKitapAdi] = useState("");
-    const [kitapYazari, setKitapYazari] = useState("");
-    const [kitapKategorisi, setKitapKategorisi] = useState("Kategori Seçiniz");
-    const [kitapSayfaSayisi, setKitapSayfaSayisi] = useState(0);
-    const [kitapResmi, setKitapResmi] = useState("");
-    const [kitapAciklamasi, setKitapAciklamasi] = useState("");
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Kitap Başarıyla Eklendi!");
-        const resimUrl = kitapResmi !== "" ? kitapResmi : defaultImage;
-        yeniKitapEkleDuzenle({
-            id: kitaplik.length > 0 ? (Number(kitaplik[kitaplik.length - 1].id) + 1).toString() : "1",
-            kitapAdi: kitapAdi,
-            kitapYazari: kitapYazari,
-            kitapKategorisi: kitapKategorisi,
-            kitapSayfaSayisi: kitapSayfaSayisi,
-            kitapResmi: resimUrl,
-            kitapAciklamasi: kitapAciklamasi
-        });
-        setKitapAdi("");
-        setKitapYazari("");
-        setKitapKategorisi("Kategori Seçiniz");
-        setKitapSayfaSayisi(0);
-        setKitapResmi("");
-        setKitapAciklamasi("");
-    };
-
-    useEffect(() => {
-        if (duzenlenecekKitap) {
-            setKitapAdi(duzenlenecekKitap.kitapAdi);
-            setKitapYazari(duzenlenecekKitap.kitapYazari);
-            setKitapKategorisi(duzenlenecekKitap.kitapKategorisi);
-            setKitapResmi(duzenlenecekKitap.kitapResmi);
-            setKitapSayfaSayisi(duzenlenecekKitap.kitapSayfaSayisi);
-            setKitapAciklamasi(duzenlenecekKitap.kitapAciklamasi);
-        }
-    }, [duzenlenecekKitap])
-
+const Forms = () => {
+    const {
+        handleSubmit, duzenlenecekKitap,
+        kitapAdi,
+        kitapYazari,
+        kitapKategorisi,
+        kitapSayfaSayisi,
+        kitapResmi,
+        kitapAciklamasi,
+        setKitapAdi,
+        setKitapYazari,
+        setKitapKategorisi,
+        setKitapSayfaSayisi,
+        setKitapResmi,
+        setKitapAciklamasi,
+    } = useContext(DataContext);
     return (
         <div className="form-container">
             <h1 className='form-title'>

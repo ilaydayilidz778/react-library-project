@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaSearch } from "react-icons/fa";
 import '../assets/styles/search.scss';
+import DataContext from '../context/DataContext';
 
-const Search = ({ setArananKelime }) => {
+const Search = () => {
+    const { setArananKelime } = useContext(DataContext)
     return (
         <div className='search-form'>
             <div className='container'>

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../assets/styles/card.scss';
 import { AiOutlineDelete } from 'react-icons/ai'
 import { MdOutlineModeEdit } from 'react-icons/md'
+import DataContext from '../context/DataContext';
 
-const Cards = ({ kitap, kitapSil, cardDuzenle }) => {
+const Cards = ({ kitap }) => {
+    const { kitapSil, cardDuzenle } = useContext(DataContext)
     return (
         <section key={kitap.id} className='book'>
             <div className='book-card'>

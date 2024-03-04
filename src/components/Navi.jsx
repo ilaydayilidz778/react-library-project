@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import LibLogo from '../assets/img/navLogo.png';
 import '../assets/styles/navi.scss';
+import DataContext from '../context/DataContext';
 
-const Navi = ({ data, setSeciliKategori }) => {
-
+const Navi = () => {
+    const { kategoriler, setSeciliKategori } = useContext(DataContext)
     const seciliKategoriyiDuzenle = (kategoriAdi) => {
         setSeciliKategori(kategoriAdi);
     };
@@ -21,7 +22,7 @@ const Navi = ({ data, setSeciliKategori }) => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='ms-auto'>
-                            {data.map(kategori =>
+                            {kategoriler.map(kategori =>
                                 <Nav.Link key={kategori.id} href={`#${kategori.id}`} onClick={() => seciliKategoriyiDuzenle(kategori.kategoriAdi)}>{kategori.kategoriAdi}</Nav.Link>
                             )}
                         </Nav>
