@@ -1,6 +1,5 @@
 .book .book-card {
     position: relative;
-    /* Silme ve düzenleme butonlarının konumlandırılması için */
     width: 450px;
     height: 350px;
     background-color: rgb(255, 255, 255);
@@ -11,8 +10,6 @@
     margin: 20px;
     border-radius: 10px;
     overflow: hidden;
-    /* Butonların dışarı taşmasını engellemek için */
-    position: relative;
 }
 
 .book .book-card img {
@@ -23,10 +20,15 @@
 }
 
 .book .book-card .book-card-body {
-    padding: 10px;
+    padding: 10px 10px;
 }
 
 .book .book-card .book-card-body .title {
+    font-size: small;
+    text-align: center;
+}
+
+.book .book-card .book-card-body .book-title {
     text-align: center;
 }
 

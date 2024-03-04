@@ -15,7 +15,7 @@
       "kitapYazari": "Jean Christophe Grange",
       "kitapKategorisi": "Edebiyat",
       "kitapResmi": "https://img.kitapyurdu.com/v1/getImage/fn:11850394/wh:true/wi:220",
-      "kitapSayfaSayisi": 584,
+      "kitapSayfaSayisi": "584",
       "kitapAciklamasi": "Mayıs 1968’de Paris adeta yangın yeriyken, genç bir kadının bir yoga pozisyonunda, çıplak ve parçalanmış cesedi bulunur. Polis Jean-Louis Mersch, cinayeti soruşturmaya başlar. Maktulün arkadaşları Hervé ile Nicole de ona yardımcı olurlar. Bir başka kadın arkadaşları daha cinayete kurban gittiğinde, ölümün kendi çevrelerinde kol gezdiğini düşünmeye başlarlar."
     },
     {
@@ -24,12 +24,12 @@
       "kitapYazari": "Malcolm Gladwell",
       "kitapKategorisi": "Diğer",
       "kitapResmi": "https://i.dr.com.tr/cache/600x600-0/originals/0000000303463-1.jpg",
-      "kitapSayfaSayisi": 244,
+      "kitapSayfaSayisi": "244",
       "kitapAciklamasi": "Başarılı insanlar hakkında anlatılan bir hikaye vardır; onların zeki ve hırslı oldukları söylenir. Outliers’te Malcolm Gladwell başarının gerçek hikayesinin bundan çok farklı olduğunu ve bazı insanların neden başarılı olduğunu anlamak için, bunların çevrelerine daha dikkatli bakmamız gerektiğini iddia ediyor."
     },
     {
       "id": "4",
-      "kitapAdi": "Gece Yarisi Kütüphanesi",
+      "kitapAdi": "Gece Yarısı Kütüphanesi",
       "kitapYazari": "Matt Haig",
       "kitapKategorisi": "Diğer",
       "kitapResmi": "https://img.kitapyurdu.com/v1/getImage/fn:11631602/wh:true/wi:800",
@@ -151,8 +151,7 @@
       "kitapKategorisi": "Edebiyat",
       "kitapSayfaSayisi": "80",
       "kitapResmi": "https://m.media-amazon.com/images/I/41L6CTyzlJL._SY445_SX342_.jpg",
-      "kitapAciklamasi": "Zweig bu novellası'nda bir kadının yaşamını bütünüyle değiştiren yirmi dört saatlik deneyimini anlatırken, insanda içkin saplantıların ve dayanılmaz arzuların sınırlarında gezinir. Özgürce ve tutkuyla içgüdülerinin peşine takılan bir kadının bu kısa ve yoğun hikayesi, kadın kalbinin sırlarına ermiş ustanın kaleminde olağanüstü bir anlatıya dönüşür. Yapıtı için mekan olarak muhteşem atmosferiyle Fransız Riviera'sını seçen Zweig, 1920'li yılların sonlarında Avrupa'nın \"kibar\" tabakasının ikiyüzlü ahlak anlayışına yönelik eleştirel tavrıyla dikkat çeker.",
-      "isDeleted": true
+      "kitapAciklamasi": "Zweig bu novellası'nda bir kadının yaşamını bütünüyle değiştiren yirmi dört saatlik deneyimini anlatırken, insanda içkin saplantıların ve dayanılmaz arzuların sınırlarında gezinir. Özgürce ve tutkuyla içgüdülerinin peşine takılan bir kadının bu kısa ve yoğun hikayesi, kadın kalbinin sırlarına ermiş ustanın kaleminde olağanüstü bir anlatıya dönüşür. Yapıtı için mekan olarak muhteşem atmosferiyle Fransız Riviera'sını seçen Zweig, 1920'li yılların sonlarında Avrupa'nın \"kibar\" tabakasının ikiyüzlü ahlak anlayışına yönelik eleştirel tavrıyla dikkat çeker."
     },
     {
       "id": "18",
@@ -180,6 +179,69 @@
       "kitapSayfaSayisi": "528",
       "kitapResmi": "https://m.media-amazon.com/images/I/61tVM0kARBL._SL1500_.jpg",
       "kitapAciklamasi": "Jack London'ın yarı otobiyografik romanı Martin Eden, 20. yüzyıl başında sosyal ve ideolojik meseleler ağırlıklı içeriğiyle Amerikan edebiyatında büyük ölçüde kabul görmüştür. London farklı sınıflar arasındaki zihniyet ve değer farklarını gözlerimizin önüne sererken, statü ve servetin Amerikan toplumundaki hayati önemine işaret eder. Romanın ana temalarından biri, başarı ve refah yolunun sosyal sınıf farkı gözetilmeksizin herkese açık olduğu şeklinde özetlenebilecek Amerikan Rüyası'dır. Ya da bu idealin yarattığı muazzam hayal kırıklığı.\n\nLondon, romanı bir sanatçının çıraklıktan olgunluğa geçiş sürecini işleyen Künstlerroman geleneğinde yazmıştır. Martin'in aşkı uğruna eğitimsiz genç bir işçiden başarılı ve rafine bir yazara dönüşüm mücadelesini anlatır. Kahramanı hedefine ulaştığında ise motivasyonunu ve heyecanını çoktan yitirmiş, trajik bir sona doğru sürüklenmektedir artık.\n\nJACK LONDON (1876-1916): Asıl adı John Griffith Chaney olan Jack London, San Francisco'da doğdu. California'daki Oakland'da, annesinin ve London soyadını aldığı üvey babasının yanında yetişti. On dört yaşında okulu bırakarak serüven dolu bir hayata başladı. Bir tekneyle San Francisco Körfezi'nde dolaştı, kaçak istiridye avladı ve Japonya'ya gitti. Daha sonra ortaöğrenimini tamamlayarak California Üniversitesi'ne girse de, çok geçmeden okulu bıraktı. İlk kitabı Son of the Wolf (1900; Kurt Kanı) geniş bir okur kitlesine ulaştı. Ona kalıcı bir ün sağlayan yapıtı ise The Call of the Wild (1903; Vahşetin Çağrısı) oldu. Yazarın diğer önemli yapıtları arasında White Fang (1906; Beyaz Diş), Iron Heel (1907; Demir Ökçe) ve Burning Daylight (1910; Yanar Gün) sayılabilir. London, 22 Kasım 1916'da ardında çok sayıda eser bırakarak hayata gözlerini yumdu. Martin Eden'ı yaratıcısıyla arasındaki paralelliklere dikkat çekerek okuma deneyimini hayli zenginleştiren notlarla sunuyoruz."
+    },
+    {
+      "id": "21",
+      "kitapAdi": "Altıncı Koğuş",
+      "kitapYazari": "Anton Pavloviç Çehov",
+      "kitapKategorisi": "Edebiyat",
+      "kitapSayfaSayisi": "68",
+      "kitapResmi": "https://m.media-amazon.com/images/I/61pKQV-oNCL._SL1500_.jpg",
+      "kitapAciklamasi": "Çehov bir taşra kasabasındaki akıl hastanesinde geçen bu novellasında, eğitimli bir hasta olan İvan Dmitriç ile Doktor Andrey Yefimıç arasındaki felsefi çatışmaya odaklanır. İvan Dmitriç maruz kaldıkları adaletsizliğe, içinde yaşamaya zorlandıkları berbat koşullara karşı çıkarken, Andrey Yefimıç bunları görmezden gelmekte ısrar eder ve durumu değiştirmek için kılını bile kıpırdatmaz. Doktor sonunda içine düştüğü \"felsefi\" yanılgının farkına vardığında ise artık iş işten geçmiştir. Altıncı Koğuş, Rusya'nın ve ülkenin sorunlarıyla ilgilenmek yerine onları uzaktan izlemeyi tercih eden elit Rus aydınının \"deliliği\"nin simgesidir adeta.\nAltıncı Koğuş, Russkaya Mısl dergisinin 1892 kasım sayısında yayımlandığında büyük ilgi görmüştü. Hatta Lenin'in de yapıtı okuduktan sonra dehşete kapıldığı, \"Kendimi Alıncı Koğuş'a kapatılmış gibi hissettim\" dediği rivayet edilir."
+    },
+    {
+      "id": "22",
+      "kitapAdi": "Yakın Tarihin Gerçekleri",
+      "kitapYazari": "İlber Ortaylı",
+      "kitapKategorisi": "Tarih",
+      "kitapSayfaSayisi": "352",
+      "kitapResmi": "https://m.media-amazon.com/images/I/61UYPKdVlrL._SL1000_.jpg",
+      "kitapAciklamasi": "\"İttihatçılar milliyetperver ve büyük ideallere sahiplerdi ama kendilerini değerlendiremeyen bir ekip olmaları onları başarısızlığa sürükledi.\"\n\n\"Mustafa Kemal (Atatürk), Suriye'de Vatan Cemiyeti'ni kuruyor, ertesi sene Makedonya'ya geliyor, oradan Trablusgarp'a koşuyor.\n\nTrablusgarp'taki görevi bitince tekrar bu tarafa Balkan Harbi'ne geliyor. Bu durum tabii ki kendisini ve düşüncelerini müthiş etkilemiştir.\"\n\n\"Birinci Dünya Savaşı'ndan sonra Türk toplumu kaosu ve yeni bir dünya savaşını değil, Milli Mücadele'yi tercih etmiştir.\"\n\n\"Osmanlı İmparatorluğu, milliyetçi akımlar sayesinde dağılan tek imparatorluk değildi; fakat ne Rusya, ne de Avusturya-Macaristan'da ulusalcı akımlar bu derecede aktif ve silahlı eyleme dönüşmüştü.\"\n\n\"1967'de bindiğimiz trendeki ihtiyar Araplar 'Ah nerede o Osmanlı!' diye yakınıyorlardı. Cevabı düşündürücüdür. Acaba o Osmanlı'yı kim kovaladı, bizimle beraber mi kovalandı; bilemiyoruz.\"\n\n\"1918 yılında, mütarekenin en hazin vaktinde, millet her yerde direniyordu. Ama bu direnişlerin arasında koordinasyon yoktu. O eşgüdümü hangi politik deha sağlayacaktı? Ancak arkasında askeri bir başarı ve müspet intibaları olan bir komutan. Mustafa Kemal Atatürk...\"\n\n\"İkinci Dünya Savaşı, cephede öldürdüklerinden çok, geride yaşayan ölüler bıraktı.\""
+    },
+    {
+      "id": "23",
+      "kitapAdi": "Türklerin Tarihi: Orta Asya’nın Bozkırlarından Avrupa’nın Kapılarına",
+      "kitapYazari": "İlber Ortaylı",
+      "kitapKategorisi": "Tarih",
+      "kitapSayfaSayisi": "272",
+      "kitapResmi": "https://m.media-amazon.com/images/I/51Z73pw-ycL._SL1000_.jpg",
+      "kitapAciklamasi": "\"Koca bir kavmin binlerce kilometreyi üç asır içinde geçtiğini düşünün. Bu, dünyayı değiştirmez de ne yapar? İşte Türkler dünyayı böyle değiştirdi. Bu sebeple, bizim hayali bir tarih ve kahramanlar üretmeye değil, yalnızca doğruyu öğrenmeye ihtiyacımız var.\""
+    },
+    {
+      "id": "24",
+      "kitapAdi": "Cumhuriyet’in Doğuşu: Kurtuluş ve Kuruluş Yılları",
+      "kitapYazari": "İlber Ortaylı",
+      "kitapKategorisi": "Tarih",
+      "kitapSayfaSayisi": "304",
+      "kitapResmi": "https://m.media-amazon.com/images/I/719G9fwtWdL._SY522_.jpg",
+      "kitapAciklamasi": "\"Türkiye Cumhuriyeti'ni kuran insanlar basit maceracılar, küskünler veya kendine yer arayanlar değildir. Her birinin imparatorlukta komutan olarak, bürokrat olarak, münevver olarak seçkin bir yeri zaten vardı. Türkiye Cumhuriyeti'ni kuran insanların idealini takip etmemiz gerekiyor. Çünkü onlar devrin modası olan demokrasi düşmanlığına değil, kurdukları cumhuriyetin demokrasi niyetli bir devlet olarak devamına çalıştılar. Hepsini şükranla anıyoruz ve anmalıyız.\"\n- İlber Ortaylı\n\nCumhuriyet'in Doğuşu, Gazi Mustafa Kemal Paşa'nın validesi Zübeyde Hanım'ın yeterince ilgilenilmemiş hayatıyla açılıyor. Atatürk'ün doğduğu ve askerlik mesleğine girdiği dönem olan II. Abdülhamid dönemi, Balkan Savaşları, Birinci Dünya Savaşı'na girişimizden evvelki akil ses İsmet Paşa, fedakar askerlerin savaşı Çanakkale, büyük bir direnişi örgütleyen Sultanahmet Mitingleri ile devam ediyor. 19 Mayıs 1919'da kurtuluşun ilk adımı atılarak \"bitti\" gözüyle bakılan bir millet yeniden diriliyor.\nZaferin başlama anının paşası Kazım Karabekir, İstanbul'un işgali, Türkiye Büyük Millet Meclisi'nin açılışı, ölüm fermanı olarak nitelendirilebilecek Sevr Antlaşması, Kars'ın kurtuluşu, İnönü Muharebeleri, Sakarya Meydan Muharebesi, Ankara Antlaşması, Başkomutanlık Meydan Muharebesi ve tarihe altın harflerle kazınan bir Milli Mücadele tarihi. Saltanatın kaldırılması, bir kurucu antlaşma vazifesi gören ve pek çok efsaneye konu olan Lozan, cumhuriyet kavramı ve Osmanlı İmparatorluğu'ndan sonra inşa olunan Türklerin yeni devleti Türkiye Cumhuriyeti.\nCumhuriyetin en başarılı ve başarısız dönemleri hangileriydi? Demokrasi serüvenimiz nasıl ilerledi? Milli Mücadele'nin mirasına ne kadar sahip çıkıldı? Eğitim ve sağlık meselelerimize dair geleceğe umutla bakabiliyor muyuz? Halifelik, harf devrimi, On İki Ada, İkinci Dünya Savaşı'ndaki tarafsızlığımız gibi konuları nasıl yorumlamalıyız?\n100 yıllık tarihimizin en hassas konularının en anlaşılır biçimde yorumlandığı Cumhuriyetin Doğuşu, kurtuluşun ve kuruluşun tarihini bir araya getiriyor.\nTarihi bizlere yeniden sevdiren İlber Ortaylı hocamızdan, cumhuriyetimizin 100. yılına unutulmaz bir armağan."
+    },
+    {
+      "id": "25",
+      "kitapAdi": "Yazılım Testi İş Analizi Kullanılabilirlik",
+      "kitapYazari": "Lütfi Koray Yitmen",
+      "kitapKategorisi": "Yazılım",
+      "kitapSayfaSayisi": "216",
+      "kitapResmi": "https://m.media-amazon.com/images/I/31k2sfrAwZL.jpg",
+      "kitapAciklamasi": "Başarısız olan Bilgi Teknolojileri (BT) projelerinin katili kim? Aklınıza ilk gelen zanlı yazılımcı mı? Eğer bu şekilde düşünüyorsanız yanılıyorsunuz deriz. 10 yılı aşkın süredir Keytorc olarak, yurtiçi ve yurtdışında gerçekleştirdiğimiz danışmanlık ve dış kaynak kullanımı projelerinde edindiğimiz tecrübeler ışığında yukarıdaki soruya, bu kitapla daha geniş bir açıdan bakmanızı sağlıyor olacağız. Bu sayede BT projelerinde başarının veya başarısızlığın tek kaynağının kodlama ve kodu geliştiren yazılımcılar olmadığını; yazılım testi, iş analizi ve kullanılabilirliğe de çok fazla işler düştüğünü görüyor olacaksınız. İlk iki baskısının kısa sürede tükenmesi üzerine, güncellenmiş 3. baskısını yapan kitap; test mühendisi, iş analisti ve kullanılabilirlik uzmanı, BT projelerinde başarılı olmak isteyen ya da benzeri alanlardaki bilgilerini artırmak isteyen herkes için eşsiz bir kaynak oluşturmaktadır. Kitap ayrıca ISTQB® ve CBAP® sınavlarına yardımcı kaynak niteliğindedir."
+    },
+    {
+      "id": "26",
+      "kitapAdi": "Proje Yönetim Süreçleri ile Yazılım Test Mühendisliği: Yazılım Test Mühendisliğine Dair Her şey ",
+      "kitapYazari": "Güneş Okan",
+      "kitapKategorisi": "Yazılım",
+      "kitapSayfaSayisi": "168",
+      "kitapResmi": "https://m.media-amazon.com/images/I/51+RU-jZ6tL._SY445_SX342_.jpg",
+      "kitapAciklamasi": "Proje Yönetim Süreçleri ile Yazılım Test Mühendisliği, yazılım proje yönetimi ve süreçleri, yazılım yönetim ve süreçleri ile başlayan ve yazılım test yönetimi süreçleri ile ilişkilendirilerek yazılım test yönetiminin baştan sona detaylı anlatıldığı bir başucu kaynağıdır. \n\nKitabımız, “Yazılım test mühendisliği” alanında yeni yetişen gençlere, yazılım test mühendisliği alanında profesyonel olarak ilerleyen veya profesyonel olarak ilerlemek isteyen kişilere önemli bir yardımcı kaynaktır.\n\n \n\nİÇİNDEKİLER:\n\nYazılım Proje Yönetimine Bakış \n\nTMMI-Test Olgunluk Modeli Yaklaşımı  (Test Maturity Integration Model) \n\nYazılım Test Mühendisliğine Giriş\n\nYazılım Geliştirme Yaşam Döngüsü (SDLC) ve Süreçleri\n\nYazılım Test Yaşam Döngüsü (STLC) Süreçleri ve Yazılım Testinin Yönetimi\n\nProje Süreçlerinin Başarılı Yönetilmesinin Önemi\n\nSürüm Yönetimi (Release Management) ve Önemi\n\nYazılım Test Yönetim Uygulamalarının Kullanılması ve Süreç Yönetimi\n\nYazılım Test Çeşitleri\n\nHata Tabanlı Test \n\nDeneyim Tabanlı Test\n\nRisk Tabanlı Test\n\nFonksiyonel Manuel (Functional Manual) Testler\n\nBilgi Güvenlik Testleri (Security Testing)\n\nGüvenilirlik Testi (Reliability Testing) \n\nPerformans Testi (Performance Testing)\n\nHata Yaşam Döngüsü (Defect Life Cycle) ve Yönetiminin Yapılması\n\nYazılım Test Otomasyonu\n\nManuel Test mi, Otomasyon Testi mi?"
+    },
+    {
+      "id": "27",
+      "kitapAdi": "Filistin Benimdir: Ortadoğu'nun Kanlı Tarihi",
+      "kitapYazari": "Hüsnü Mahalli",
+      "kitapKategorisi": "Tarih",
+      "kitapSayfaSayisi": "568",
+      "kitapResmi": "https://m.media-amazon.com/images/I/51o6QdJksrL._SL1000_.jpg",
+      "kitapAciklamasi": "İsrail’e karşı direnişe katılan Filistinli bir genç kendisi öldükten sonra annesine verilmek üzere bir mektup yazmış ve arkadaşına vermiş. Mektubu alan annesi hiç ağlamadan okumuş:“Anacığım; bir insanı kendi toprağından söküp atabilirler ama o insanın yüreğinden vatan sevgisini yok edemezler çünkü vatan anadır. Yani sensin. Anacığım; vatanımı kurtarmadan öldüğüm için sakın kızma bana.\n\nÇok yakında babam ve dedemle birlikte mezarlıktaki herkesi örgütleyerek önce toprağın altını sonra yukarı çıkıp üstünü de kurtaracağız. Çok yakında zeytin ağaçlarımız özgür olacak. Yafa portakallarımız çiçek kokacak. Unutma bunları sen söylemiştin bana. Analar yalan söylemez çocuklarına. Sen söyledin ben inandım çünkü sen anasın, çünkü senin adın Filistin. Ben ölmedikçe sen sonsuza dek yaşayacaksın.”\nÜrünün baskısı görseldeki ile farklılık gösterebilir."
     }
   ],
   "kategoriler": [

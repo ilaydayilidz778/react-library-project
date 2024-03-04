@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Form, Button } from 'react-bootstrap';
 import defaultImage from '../assets/img/defaultImage.jpg';
 import '../assets/styles/form.scss';
 
-const Forms = ({ yeniKitapEkle, kitaplik }) => {
+const Forms = ({ yeniKitapEkleDuzenle, kitaplik, duzenlenecekKitap }) => {
     const [kitapAdi, setKitapAdi] = useState("");
     const [kitapYazari, setKitapYazari] = useState("");
     const [kitapKategorisi, setKitapKategorisi] = useState("Kategori Seçiniz");
@@ -16,7 +16,7 @@ const Forms = ({ yeniKitapEkle, kitaplik }) => {
         e.preventDefault();
         console.log("Kitap Başarıyla Eklendi!");
         const resimUrl = kitapResmi !== "" ? kitapResmi : defaultImage;
-        yeniKitapEkle({
+        yeniKitapEkleDuzenle({
             id: kitaplik.length > 0 ? (Number(kitaplik[kitaplik.length - 1].id) + 1).toString() : "1",
             kitapAdi: kitapAdi,
             kitapYazari: kitapYazari,
@@ -33,10 +33,21 @@ const Forms = ({ yeniKitapEkle, kitaplik }) => {
         setKitapAciklamasi("");
     };
 
+    useEffect(() => {
+        if (duzenlenecekKitap) {
+            setKitapAdi(duzenlenecekKitap.kitapAdi);
+            setKitapYazari(duzenlenecekKitap.kitapYazari);
+            setKitapKategorisi(duzenlenecekKitap.kitapKategorisi);
+            setKitapResmi(duzenlenecekKitap.kitapResmi);
+            setKitapSayfaSayisi(duzenlenecekKitap.kitapSayfaSayisi);
+            setKitapAciklamasi(duzenlenecekKitap.kitapAciklamasi);
+        }
+    }, [duzenlenecekKitap])
+
     return (
         <div className="form-container">
             <h1 className='form-title'>
-                Kitap Ekleme Formu
+                {duzenlenecekKitap ? "Kitap Düzenleme Formu" : "Kitap Ekleme Formu"}
                 <hr />
             </h1>
             <Card className="custom-card">
@@ -73,7 +84,7 @@ const Forms = ({ yeniKitapEkle, kitaplik }) => {
                             <Form.Control value={kitapAciklamasi} onChange={(e) => setKitapAciklamasi(e.target.value)} as="textarea" placeholder="Kitap Açıklaması" />
                         </Form.Group>
                         <Button variant="primary" type="submit" className="btn-primary" disabled={kitapAdi === "" || kitapYazari === "" || kitapKategorisi === "Kategori Seçiniz" || kitapSayfaSayisi === 0 || kitapAciklamasi === ""}>
-                            Kitap Ekle
+                            {duzenlenecekKitap ? "Düzenle" : "Kitap Ekle"}
                         </Button>
                     </Form>
                 </Card.Body>

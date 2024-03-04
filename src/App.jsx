@@ -13,6 +13,7 @@ function App() {
   const [kategoriler, setKategoriler] = useState([]);
   const [arananKelime, setArananKelime] = useState('');
   const [seciliKategori, setSeciliKategori] = useState('');
+  const [duzenlenecekKitap, setDuzenlenecekKitap] = useState('');
 
   // kitapları api getirme
   const kitapGetir = async () => {
@@ -35,12 +36,30 @@ function App() {
     kategorileriGetir();
   }, [])
 
-  const yeniKitapEkle = async (yeni) => {
-    setKitaplik(prevKitaplik => [...prevKitaplik, yeni]);
-    const url = "http://localhost:3005/kitaplar";
-    const response = await axios.post(url, yeni);
-    console.log(response);
-    // kitapGetir(); Hatalı gereksiz get isteği attı!
+  const yeniKitapEkleDuzenle = async (yeni) => {
+    //kitap ekleme işlemi için 
+    let url = "http://localhost:3005/kitaplar";
+    if (!duzenlenecekKitap) {
+      setKitaplik(prevKitaplik => [...prevKitaplik, yeni]);
+      const yeniKitapResponse = await axios.post(url, yeni);
+      console.log(yeniKitapResponse);
+      // kitapGetir(); Hatalı gereksiz get isteği atar!
+    }
+    else {
+      url += `/${duzenlenecekKitap.id}`;
+      const duzenlenecekKitapResponse = await axios.put(url, yeni);
+      console.log(duzenlenecekKitapResponse);
+      setDuzenlenecekKitap('');
+      setKitaplik(prevKitaplik =>
+        prevKitaplik.map(kitap => {
+          if (kitap.id === duzenlenecekKitap.id) {
+            return { ...duzenlenecekKitapResponse.data }
+          }
+          else {
+            return { ...kitap }
+          }
+        }));
+    }
   };
 
   const kitapSil = async (id) => {
@@ -62,12 +81,17 @@ function App() {
       filtreyeGoreKitaplariGetir(seciliKategori);
   }, [seciliKategori]);
 
+  const cardDuzenle = (id) => {
+    const duzenlenecekKitap = kitaplik.find(kitap => kitap.id === id);
+    setDuzenlenecekKitap(duzenlenecekKitap);
+  };
+
   return (
     <>
       <Navi data={kategoriler} setSeciliKategori={setSeciliKategori} />
       <Search setArananKelime={setArananKelime} />
-      <Forms yeniKitapEkle={yeniKitapEkle} kitaplik={kitaplik} />
-      <CardList data={kitaplik} kitapSil={kitapSil} arananKelime={arananKelime} />
+      <Forms yeniKitapEkleDuzenle={yeniKitapEkleDuzenle} kitaplik={kitaplik} duzenlenecekKitap={duzenlenecekKitap} />
+      <CardList data={kitaplik} kitapSil={kitapSil} arananKelime={arananKelime} cardDuzenle={cardDuzenle} />
     </>
   )
 }

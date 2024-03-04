@@ -3,17 +3,19 @@ import '../assets/styles/card.scss';
 import { AiOutlineDelete } from 'react-icons/ai'
 import { MdOutlineModeEdit } from 'react-icons/md'
 
-const Cards = ({ kitap, kitapSil }) => {
+const Cards = ({ kitap, kitapSil, cardDuzenle }) => {
     return (
         <section key={kitap.id} className='book'>
             <div className='book-card'>
                 <button
                     onClick={() => kitapSil(kitap.id)}
                     className='delete'><AiOutlineDelete /></button>
-                <button className='edit'><MdOutlineModeEdit /></button>
+                <button
+                    onClick={() => cardDuzenle(kitap.id)}
+                    className='edit'><MdOutlineModeEdit /></button>
                 <img src={kitap.kitapResmi} alt="kitap-kapak" />
                 <div className='book-card-body'>
-                    <h6 className='title'>{kitap.kitapAdi}</h6>
+                    <h6 className='book-title'>{kitap.kitapAdi}</h6>
                     <hr />
                     <p><strong>Kitap Yazarı:</strong>{kitap.kitapYazari}</p>
                     <p><strong>Kitap Türü:</strong>{kitap.kitapKategorisi}</p>

@@ -2,7 +2,7 @@ import React from 'react';
 import Cards from './Cards';
 import '../assets/styles/cardList.scss';
 
-const CardList = ({ data, kitapSil, arananKelime }) => {
+const CardList = ({ data, kitapSil, arananKelime, cardDuzenle }) => {
     return (
         <section className='book-list'>
             <h1 className='title'>
@@ -15,7 +15,7 @@ const CardList = ({ data, kitapSil, arananKelime }) => {
                     (
                         (kitap.kitapYazari.toLowerCase().startsWith(arananKelime.toLowerCase()) ||
                             kitap.kitapAdi.toLowerCase().startsWith(arananKelime.toLowerCase())) &&
-                        <Cards key={kitap.id} kitap={kitap} kitapSil={kitapSil} />
+                        <Cards key={kitap.id} kitap={kitap} kitapSil={kitapSil} cardDuzenle={cardDuzenle} />
                     )
                 )}
             </div>
