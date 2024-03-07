@@ -1,60 +1,28 @@
-import React, { createContext, useEffect, useState } from "react";
-import axios from 'axios'
+import React, { createContext, useEffect, useReducer } from "react";
+import axios from 'axios';
+import { reducer, initialState, actionTypes } from '../Reducer';
 
-// context oluşturulması
 const DataContext = createContext();
 
-// oluşturulan contexte bir sağlayıcı oluşturulur.
 export const DataProvider = ({ children }) => {
-    // Proje yapısındaki tüm state, methot, etc taşınacak !!
+    const [state, dispatch] = useReducer(reducer, initialState);
 
-    const [kitaplik, setKitaplik] = useState([]);
-    const [kategoriler, setKategoriler] = useState([]);
-    const [arananKelime, setArananKelime] = useState('');
-    const [seciliKategori, setSeciliKategori] = useState('');
-    const [duzenlenecekKitap, setDuzenlenecekKitap] = useState('');
-    const [kitapAdi, setKitapAdi] = useState("");
-    const [kitapYazari, setKitapYazari] = useState("");
-    const [kitapKategorisi, setKitapKategorisi] = useState("Kategori Seçiniz");
-    const [kitapSayfaSayisi, setKitapSayfaSayisi] = useState(0);
-    const [kitapResmi, setKitapResmi] = useState("");
-    const [kitapAciklamasi, setKitapAciklamasi] = useState("");
-
-    // kategorilier api getirme
-
-
-    // Kitap ekleme/düzenleme
     const yeniKitapEkleDuzenle = async (yeni) => {
-        //kitap ekleme işlemi için 
         let url = "http://localhost:3005/kitaplar";
-        if (!duzenlenecekKitap) {
-            setKitaplik(prevKitaplik => [...prevKitaplik, yeni]);
+        if (!state.duzenlenecekKitap) {
+            dispatch({ type: actionTypes.KITAP_EKLE, payload: { yeni } })
             const yeniKitapResponse = await axios.post(url, yeni);
             console.log(yeniKitapResponse);
-            // kitapGetir(); Hatalı gereksiz get isteği atar!
-        }
-        else {
-            url += `/${duzenlenecekKitap.id}`;
+        } else {
+            url += `/${state.duzenlenecekKitap.id}`;
             const duzenlenecekKitapResponse = await axios.put(url, yeni);
-            console.log(duzenlenecekKitapResponse);
-            setDuzenlenecekKitap('');
-            setKitaplik(prevKitaplik =>
-                prevKitaplik.map(kitap => {
-                    if (kitap.id === duzenlenecekKitap.id) {
-                        return { ...duzenlenecekKitapResponse.data }
-                    }
-                    else {
-                        return { ...kitap }
-                    }
-                }));
+            dispatch({ type: actionTypes.KITAP_DUZENLE, payload: { id: state.duzenlenecekKitap.id, yeni: duzenlenecekKitapResponse.data } });
         }
     };
 
-    // Kitap silme
     const kitapSil = async (id) => {
-        setKitaplik(prevKitaplik => prevKitaplik.filter(statedenGelen => statedenGelen.id !== id));
+        dispatch({ type: actionTypes.KITAP_SIL, id })
         const url = `http://localhost:3005/kitaplar/${id}`;
-        // const response = await axios.delete(url); // !! Tehlikeli
         const response = await axios.patch(url, { isDeleted: true });
         console.log(response);
     };
@@ -62,50 +30,45 @@ export const DataProvider = ({ children }) => {
     const filtreyeGoreKitaplariGetir = async (seciliKategori) => {
         const url = `http://localhost:3005/kitaplar?kitapKategorisi=${seciliKategori}`;
         const response = await axios.get(url);
-        setKitaplik(response.data);
+        dispatch({ type: actionTypes.FILTREYE_GORE_KITAPLARI_GETIR, payload: response.data });
     };
 
     const cardDuzenle = (id) => {
-        const duzenlenecekKitap = kitaplik.find(kitap => kitap.id === id);
-        setDuzenlenecekKitap(duzenlenecekKitap);
+        dispatch({ type: actionTypes.CARD_DUZENLE, id })
     };
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Kitap Başarıyla Eklendi!");
-        const resimUrl = kitapResmi !== "" ? kitapResmi : defaultImage;
+        const resimUrl = state.kitapResmi !== "" ? state.kitapResmi : defaultImage;
         yeniKitapEkleDuzenle({
-            id: kitaplik.length > 0 ? (Number(kitaplik[kitaplik.length - 1].id) + 1).toString() : "1",
-            kitapAdi: kitapAdi,
-            kitapYazari: kitapYazari,
-            kitapKategorisi: kitapKategorisi,
-            kitapSayfaSayisi: kitapSayfaSayisi,
+            id: state.kitaplik.length > 0 ? (Number(state.kitaplik[state.kitaplik.length - 1].id) + 1).toString() : "1",
+            kitapAdi: state.kitapAdi,
+            kitapYazari: state.kitapYazari,
+            kitapKategorisi: state.kitapKategorisi,
+            kitapSayfaSayisi: state.kitapSayfaSayisi,
             kitapResmi: resimUrl,
-            kitapAciklamasi: kitapAciklamasi
+            kitapAciklamasi: state.kitapAciklamasi
         });
-        setKitapAdi("");
-        setKitapYazari("");
-        setKitapKategorisi("Kategori Seçiniz");
-        setKitapSayfaSayisi(0);
-        setKitapResmi("");
-        setKitapAciklamasi("");
+        dispatch({ type: actionTypes.FORM_RESET })
+    }
+
+    const seciliKategoriyiDuzenle = (kategoriAdi) => {
+        dispatch({ type: actionTypes.SECILEN_KATEGORI, payload: { action: kategoriAdi } });
     };
 
-    // kitapları api getirme
     const kitapGetir = async () => {
         const url = "http://localhost:3005/kitaplar";
         const response = await fetch(url);
         const kitaplar = await response.json();
-        setKitaplik(kitaplar);
+        dispatch({ type: actionTypes.KITAPLARI_GETIR, payload: kitaplar })
     }
 
-    // kategorilier api getirme
     const kategorileriGetir = async () => {
         const url = "http://localhost:3005/kategoriler";
         const response = await fetch(url);
         const kategoriler = await response.json();
-        setKategoriler(kategoriler);
+        dispatch({ type: actionTypes.KATEGORILERI_GETIR, payload: kategoriler })
     }
 
     useEffect(() => {
@@ -114,46 +77,11 @@ export const DataProvider = ({ children }) => {
     }, [])
 
     useEffect(() => {
-        seciliKategori &&
-            filtreyeGoreKitaplariGetir(seciliKategori);
-    }, [seciliKategori]);
-
-    useEffect(() => {
-        if (duzenlenecekKitap) {
-            setKitapAdi(duzenlenecekKitap.kitapAdi);
-            setKitapYazari(duzenlenecekKitap.kitapYazari);
-            setKitapKategorisi(duzenlenecekKitap.kitapKategorisi);
-            setKitapResmi(duzenlenecekKitap.kitapResmi);
-            setKitapSayfaSayisi(duzenlenecekKitap.kitapSayfaSayisi);
-            setKitapAciklamasi(duzenlenecekKitap.kitapAciklamasi);
-        }
-    }, [duzenlenecekKitap]);
-
-
+        state.seciliKategori && filtreyeGoreKitaplariGetir(state.seciliKategori);
+    }, [state.seciliKategori]);
 
     return (
-
-        <DataContext.Provider value={
-            {
-                kitapSil, cardDuzenle, // Card
-                kitaplik, arananKelime, // CardList
-                kategoriler, setSeciliKategori, //Navi
-                setArananKelime, //Search
-                handleSubmit, duzenlenecekKitap, //Form
-                kitapAdi,
-                kitapYazari,
-                kitapKategorisi,
-                kitapSayfaSayisi,
-                kitapResmi,
-                kitapAciklamasi,
-                setKitapAdi,
-                setKitapYazari,
-                setKitapKategorisi,
-                setKitapSayfaSayisi,
-                setKitapResmi,
-                setKitapAciklamasi,
-            }
-        }>
+        <DataContext.Provider value={{ kitapSil, cardDuzenle, handleSubmit, seciliKategoriyiDuzenle, state, dispatch }}>
             {children}
         </DataContext.Provider>
     );

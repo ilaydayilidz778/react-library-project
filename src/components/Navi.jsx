@@ -6,10 +6,8 @@ import '../assets/styles/navi.scss';
 import DataContext from '../context/DataContext';
 
 const Navi = () => {
-    const { kategoriler, setSeciliKategori } = useContext(DataContext)
-    const seciliKategoriyiDuzenle = (kategoriAdi) => {
-        setSeciliKategori(kategoriAdi);
-    };
+    const { state, seciliKategoriyiDuzenle } = useContext(DataContext);
+    const { kategoriler } = state;
 
     return (
         <>

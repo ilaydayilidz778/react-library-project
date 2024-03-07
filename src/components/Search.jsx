@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { FaSearch } from "react-icons/fa";
 import '../assets/styles/search.scss';
 import DataContext from '../context/DataContext';
 
 const Search = () => {
-    const { setArananKelime } = useContext(DataContext)
+    const { dispatch } = useContext(DataContext);
     return (
         <div className='search-form'>
             <div className='container'>
@@ -17,7 +17,8 @@ const Search = () => {
                                 type="search"
                                 className='form-control'
                                 placeholder='Search..'
-                                onChange={e => setArananKelime(e.target.value)}
+                                // case-8
+                                onChange={e => dispatch({ type: "search", payload: e.target })}
                             />
                             <span className='search-btn'>
                                 <FaSearch className='search-btn-icon' size={24} />
