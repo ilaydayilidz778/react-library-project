@@ -13,17 +13,15 @@ const CardList = () => {
                 <hr />
             </h1>
             <div className='card-list'>
-                {kitaplik
-                    .filter(kitap =>
-                        !kitap.isDeleted &&
+                {kitaplik.map(kitap =>
+                    !kitap.isDeleted &&
                         (kitap.kitapYazari.toLowerCase().startsWith(arananKelime.toLowerCase()) ||
                             kitap.kitapAdi.toLowerCase().startsWith(arananKelime.toLowerCase()))
-                    )
-                    .map(filteredKitap => (
-                        <Cards key={filteredKitap.id} kitap={filteredKitap} />
-                    ))
-                }
+                        ? <Cards key={kitap.id} kitap={kitap} />
+                        : null
+                )}
             </div>
+
         </section>
     );
 };

@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useReducer } from "react";
+import defaultImage from "../assets/img/defaultImage.jpg"
 import axios from 'axios';
 import { reducer, initialState, actionTypes } from '../Reducer';
 
@@ -41,8 +42,9 @@ export const DataProvider = ({ children }) => {
         e.preventDefault();
         console.log("Kitap Başarıyla Eklendi!");
         const resimUrl = state.kitapResmi !== "" ? state.kitapResmi : defaultImage;
+        const yeniId = state.kitaplik.length > 0 ? (Number(state.kitaplik[state.kitaplik.length - 1].id) + 1).toString() : "1";
         yeniKitapEkleDuzenle({
-            id: state.kitaplik.length > 0 ? (Number(state.kitaplik[state.kitaplik.length - 1].id) + 1).toString() : "1",
+            id: yeniId,
             kitapAdi: state.kitapAdi,
             kitapYazari: state.kitapYazari,
             kitapKategorisi: state.kitapKategorisi,

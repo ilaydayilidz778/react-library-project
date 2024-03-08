@@ -2,12 +2,13 @@
   "kitaplar": [
     {
       "id": "1",
-      "kitapAdi": "Körlük",
-      "kitapYazari": "Jose Saramago",
-      "kitapKategorisi": "Edebiyat",
-      "kitapResmi": "https://img.kitapyurdu.com/v1/getImage/fn:11857266/wh:true/wi:800",
-      "kitapSayfaSayisi": 320,
-      "kitapAciklamasi": "Usta yazarın belki de en etkileyici yapıtı olan, sinemaya da uyarlanmış Körlük, toplumsal yaşamın nasıl bir vahşete dönüşebileceğini müthiş bir incelikle gözler önüne sererken, insana dair son umut kırıntısını da bir kadının tek başına örgütlediği dayanışma ve direniş..."
+      "kitapAdi": "asasas",
+      "kitapYazari": "asasaSAS",
+      "kitapKategorisi": "Yazılım",
+      "kitapSayfaSayisi": "900",
+      "kitapResmi": "/src/assets/img/defaultImage.jpg",
+      "kitapAciklamasi": "lkedfjnlwkjDJMSŞASXÇ<ZSMÇASMFÖDNFÖASKNFLAWNFLAKSFWKSJFLWJDFQLWJŞQWJFDŞQWJFQWW",
+      "isDeleted": true
     },
     {
       "id": "2",
@@ -189,7 +190,8 @@
       "kitapKategorisi": "Edebiyat",
       "kitapSayfaSayisi": "68",
       "kitapResmi": "https://m.media-amazon.com/images/I/61pKQV-oNCL._SL1500_.jpg",
-      "kitapAciklamasi": "Çehov bir taşra kasabasındaki akıl hastanesinde geçen bu novellasında, eğitimli bir hasta olan İvan Dmitriç ile Doktor Andrey Yefimıç arasındaki felsefi çatışmaya odaklanır. İvan Dmitriç maruz kaldıkları adaletsizliğe, içinde yaşamaya zorlandıkları berbat koşullara karşı çıkarken, Andrey Yefimıç bunları görmezden gelmekte ısrar eder ve durumu değiştirmek için kılını bile kıpırdatmaz. Doktor sonunda içine düştüğü \"felsefi\" yanılgının farkına vardığında ise artık iş işten geçmiştir. Altıncı Koğuş, Rusya'nın ve ülkenin sorunlarıyla ilgilenmek yerine onları uzaktan izlemeyi tercih eden elit Rus aydınının \"deliliği\"nin simgesidir adeta.\nAltıncı Koğuş, Russkaya Mısl dergisinin 1892 kasım sayısında yayımlandığında büyük ilgi görmüştü. Hatta Lenin'in de yapıtı okuduktan sonra dehşete kapıldığı, \"Kendimi Alıncı Koğuş'a kapatılmış gibi hissettim\" dediği rivayet edilir."
+      "kitapAciklamasi": "Çehov bir taşra kasabasındaki akıl hastanesinde geçen bu novellasında, eğitimli bir hasta olan İvan Dmitriç ile Doktor Andrey Yefimıç arasındaki felsefi çatışmaya odaklanır. İvan Dmitriç maruz kaldıkları adaletsizliğe, içinde yaşamaya zorlandıkları berbat koşullara karşı çıkarken, Andrey Yefimıç bunları görmezden gelmekte ısrar eder ve durumu değiştirmek için kılını bile kıpırdatmaz. Doktor sonunda içine düştüğü \"felsefi\" yanılgının farkına vardığında ise artık iş işten geçmiştir. Altıncı Koğuş, Rusya'nın ve ülkenin sorunlarıyla ilgilenmek yerine onları uzaktan izlemeyi tercih eden elit Rus aydınının \"deliliği\"nin simgesidir adeta.\nAltıncı Koğuş, Russkaya Mısl dergisinin 1892 kasım sayısında yayımlandığında büyük ilgi görmüştü. Hatta Lenin'in de yapıtı okuduktan sonra dehşete kapıldığı, \"Kendimi Alıncı Koğuş'a kapatılmış gibi hissettim\" dediği rivayet edilir.",
+      "isDeleted": true
     },
     {
       "id": "22",
@@ -225,7 +227,8 @@
       "kitapKategorisi": "Yazılım",
       "kitapSayfaSayisi": "216",
       "kitapResmi": "https://m.media-amazon.com/images/I/31k2sfrAwZL.jpg",
-      "kitapAciklamasi": "Başarısız olan Bilgi Teknolojileri (BT) projelerinin katili kim? Aklınıza ilk gelen zanlı yazılımcı mı? Eğer bu şekilde düşünüyorsanız yanılıyorsunuz deriz. 10 yılı aşkın süredir Keytorc olarak, yurtiçi ve yurtdışında gerçekleştirdiğimiz danışmanlık ve dış kaynak kullanımı projelerinde edindiğimiz tecrübeler ışığında yukarıdaki soruya, bu kitapla daha geniş bir açıdan bakmanızı sağlıyor olacağız. Bu sayede BT projelerinde başarının veya başarısızlığın tek kaynağının kodlama ve kodu geliştiren yazılımcılar olmadığını; yazılım testi, iş analizi ve kullanılabilirliğe de çok fazla işler düştüğünü görüyor olacaksınız. İlk iki baskısının kısa sürede tükenmesi üzerine, güncellenmiş 3. baskısını yapan kitap; test mühendisi, iş analisti ve kullanılabilirlik uzmanı, BT projelerinde başarılı olmak isteyen ya da benzeri alanlardaki bilgilerini artırmak isteyen herkes için eşsiz bir kaynak oluşturmaktadır. Kitap ayrıca ISTQB® ve CBAP® sınavlarına yardımcı kaynak niteliğindedir."
+      "kitapAciklamasi": "Başarısız olan Bilgi Teknolojileri (BT) projelerinin katili kim? Aklınıza ilk gelen zanlı yazılımcı mı? Eğer bu şekilde düşünüyorsanız yanılıyorsunuz deriz. 10 yılı aşkın süredir Keytorc olarak, yurtiçi ve yurtdışında gerçekleştirdiğimiz danışmanlık ve dış kaynak kullanımı projelerinde edindiğimiz tecrübeler ışığında yukarıdaki soruya, bu kitapla daha geniş bir açıdan bakmanızı sağlıyor olacağız. Bu sayede BT projelerinde başarının veya başarısızlığın tek kaynağının kodlama ve kodu geliştiren yazılımcılar olmadığını; yazılım testi, iş analizi ve kullanılabilirliğe de çok fazla işler düştüğünü görüyor olacaksınız. İlk iki baskısının kısa sürede tükenmesi üzerine, güncellenmiş 3. baskısını yapan kitap; test mühendisi, iş analisti ve kullanılabilirlik uzmanı, BT projelerinde başarılı olmak isteyen ya da benzeri alanlardaki bilgilerini artırmak isteyen herkes için eşsiz bir kaynak oluşturmaktadır. Kitap ayrıca ISTQB® ve CBAP® sınavlarına yardımcı kaynak niteliğindedir.",
+      "isDeleted": true
     },
     {
       "id": "26",
@@ -254,15 +257,6 @@
       "kitapSayfaSayisi": "175",
       "kitapResmi": "https://m.media-amazon.com/images/I/61iHnFJkHbL._SL1500_.jpg",
       "kitapAciklamasi": "Tüm hayvanların en zekisi, iyiliğin ne demek olduğunu bilen insanoğluna sistematik bir baskı uygulayarak onu otomatik işleyen bir makine haline getirenlere kılıç kadar keskin olan kalemimle saldırmaktan başka hiçbir şey yapamıyorum...\n...\nCockney dilinde (İngiliz argosu) bir deyiş vardır. \"Uqueer as as clockwork orange\". Bu deyiş, olabilecek en yüksek derecede gariplikleri barındıran kişi anlamına gelir. Bu çok sevdiğim lafı, yıllarca bir kitap başlığında kullanmayı düşünmüşümdür. Bir de tabii Malezya'da \"canlı\" anlamına gelen \"orang\" sözcüğü var. Kitabı yazmaya başladığımda, rengi ve hoş bir kokusu olan bir meyvenin kullanıldığı bu deyişin, tam da benim anlatmak istediğim duruma, Pavlov kanunlarının uygulanmasına dayalı bir hikayeye çok iyi oturduğunu düşündüm...\n-Anthony Burges-\n\nKarabasan gibi bir gelecek atmosferi... Geceleyin sokaklara dehşet saçan, yaşamları şiddet üzerine kurulu gençler... Sosyal kehanet? Kara mizah? Özgür iradenin irdelenişi?.. Otomatik Portakal bunların hepsidir. Aynı zamanda hayranlık verici bir dilsel deneydir, çünkü Burgess antikahramanı için yeni bir dil yaratır: Yakın geleceğin argosu \"nadsat\"ı.\n\n... ve Stanley Kubrick'in muhteşem film uyarlaması, yirminci yüzyılın kült eserlerinden biri olan bu romanın şöhretini pekiştirmiştir...\n\nÖzgür irade, şiddet, suç, birey - toplum çatışması gibi konuların ele alındığı Otomatik Portakal, pek çok ödüle layık görülürken pek çok yapıta da ilham olmuştur. Baskıcı bir yönetime kafa tutan suç makinesi bir sokak çetesinin lideri olan Alex'i konu alan eser, gençlerin pop ve şiddet kültürüne kapılıp gitmesini ağır bir biçimde eleştiriyor. Suçu, suçluyu, kurbanı, toplumu farklı bakış açılarıyla görmek için Otomatik Portakal kitabını satın alabilirsiniz."
-    },
-    {
-      "id": "1",
-      "kitapAdi": " Buzullar Arasında Bir Kış",
-      "kitapYazari": "Jules Verne ",
-      "kitapKategorisi": "Edebiyat",
-      "kitapSayfaSayisi": "96",
-      "kitapResmi": "https://m.media-amazon.com/images/I/61hts4X1hxL._SL1500_.jpg",
-      "kitapAciklamasi": "1855 yılında ilk kez Musee des familles dergisinde yayımlanan Buzullar Arasında Bir Kış, okuru Dunkerque'ten dondurucu Grönland'a uzanan, aşk ve dostluk uğruna girişilen heyecan ve gerilim dolu bir maceraya davet ediyor. Bu kısa ama çarpıcı öyküde, büyük macera romanlarının barındırabileceği bütün unsurlar mevcuttur: Çetin bir deniz yolculuğu, zorlu bir arama kurtarma girişimi, düşman bir çevrede, son derece elverişsiz koşullarda hayatta kalma mücadelesi, gemide isyan. Kaptan Louis Cornbutte, Korkusuz Kız adlı gemiyle çıktığı sefer sırasında, tehlike sinyallerini aldığı bir uskunanın yardımına koşmak üzere iki tayfasıyla birlikte filikayla denize açılmış ve geri dönmemiştir. Korkusuz Kız'ı seferine başladığı Dunkerque'e ikinci kaptanı geri getirir. Louis'nin öldüğüne inanmayan ve kendisi de denizci olan babası Jean Cornbutte, mürettebatı toplayarak oğlunu aramak üzere yeniden denize açılır."
     }
   ],
   "kategoriler": [

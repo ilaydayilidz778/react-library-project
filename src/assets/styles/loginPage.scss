@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+
+.main-page {
+    position: relative;
+    height: 100%;
+    padding: 50px;
+    background: linear-gradient(rgba(141, 39, 174, 0.3), rgba(141, 39, 174, 0.5)), url("../img/lib.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    a {
+        color: white;
+        display: inline-block;
+        margin-top: 15px;
+
+        &:hover {
+            color: greenyellow;
+        }
+    }
+
+    form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(135deg, #e6c6f5, #8a2be2);
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: white;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #fefeff;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: 'Arial', sans-serif;
+        color: white;
+    }
+
+    input[type="submit"] {
+        background-color: #6a1ab0;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #42106d;
+
+    }
+
+    .animate {
+        text-align: center;
+        position: absolute;
+        font-family: "Calligraffitti", cursive;
+        animation: start 3s 1 forwards ease-in;
+        font-size: 35px;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(360deg);
+
+        h3 {
+            color: white;
+            margin: 0;
+        }
+    }
+
+    .book,
+    .book1,
+    .book2,
+    .book3 {
+        width: 50px;
+        position: absolute;
+        right: 80px;
+        top: -200px;
+        opacity: 0;
+    }
+
+    .book {
+        animation: book 4s 3s forwards ease-in;
+    }
+
+    .book1 {
+        animation: book 3s 4s forwards ease-in;
+    }
+
+    .book2 {
+        animation: book 2s 5s forwards ease-in;
+    }
+
+    @keyframes start {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes book {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            width: 100px;
+            top: 300px;
+            right: -30%;
+            opacity: 0;
+            filter: blur(1px) grayscale(1);
+            transform: rotate(900deg);
+        }
+    }
+}

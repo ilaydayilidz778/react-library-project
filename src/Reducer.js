@@ -35,16 +35,19 @@ export const actionTypes = {
 
 export const reducer = (state, action) => {
     switch (action.type) {
+
         case actionTypes.KITAPlARI_GETIR:
             return {
                 ...state,
                 kitaplik: action.payload
             }
+
         case actionTypes.KATEGORILERI_GETIR:
             return {
                 ...state,
                 kategoriler: action.payload
             }
+
         case actionTypes.FORM_RESET:
             return {
                 ...state,
@@ -55,6 +58,7 @@ export const reducer = (state, action) => {
                 kitapResmi: "",
                 kitapAciklamasi: ""
             }
+
         case actionTypes.CARD_DUZENLE:
             const duzenlenecekKitap = state.kitaplik.find(kitap => kitap.id === action.id);
             return {
@@ -67,18 +71,21 @@ export const reducer = (state, action) => {
                 kitapAciklamasi: duzenlenecekKitap.kitapAciklamasi,
                 duzenlenecekKitap: duzenlenecekKitap
             }
+
         case actionTypes.KITAP_SIL:
             const filtredKitaplik = state.kitaplik.filter(item => item.id !== action.id);
             return {
                 ...state,
                 kitaplik: filtredKitaplik
             }
+
         case actionTypes.KITAP_EKLE:
             const guncelKitaplik = [...state.kitaplik, action.payload.yeni];
             return {
                 ...state,
                 kitaplik: guncelKitaplik
             }
+
         case actionTypes.KITAP_DUZENLE:
             const guncellenmisKitaplar = state.kitaplik.map(kitap => {
                 if (kitap.id === action.payload.id) {

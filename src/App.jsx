@@ -1,16 +1,15 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import CardList from './components/CardList'
-import Forms from './components/Form'
-import Navi from './components/Navi'
-import Search from './components/Search'
+import LoginPage from './components/LoginPage'
+import Home from './components/Home'
 
 function App() {
   return (
     <>
-      <Navi />
-      <Search />
-      <Forms />
-      <CardList />
+      <Routes>
+        <Route path='/login' element={<LoginPage />}></Route>
+        <Route path='/' element={<Home />}></Route>
+      </Routes>
     </>
   )
 }

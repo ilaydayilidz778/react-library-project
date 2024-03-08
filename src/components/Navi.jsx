@@ -4,9 +4,10 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import LibLogo from '../assets/img/navLogo.png';
 import '../assets/styles/navi.scss';
 import DataContext from '../context/DataContext';
+import { actionTypes } from '../Reducer';
 
 const Navi = () => {
-    const { state, seciliKategoriyiDuzenle } = useContext(DataContext);
+    const { state } = useContext(DataContext);
     const { kategoriler } = state;
 
     return (
@@ -20,8 +21,8 @@ const Navi = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='ms-auto'>
-                            {kategoriler.map(kategori =>
-                                <Nav.Link key={kategori.id} href={`#${kategori.id}`} onClick={() => seciliKategoriyiDuzenle(kategori.kategoriAdi)}>{kategori.kategoriAdi}</Nav.Link>
+                            {kategoriler.map(item =>
+                                <Nav.Link onClick={(e) => dispatch({ type: actionTypes.seciliKategoriyiDuzenle, payload: e.target.innerText })} key={item.id} ></Nav.Link>
                             )}
                         </Nav>
                     </Navbar.Collapse>

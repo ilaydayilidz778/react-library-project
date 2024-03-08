@@ -6,10 +6,15 @@ html,
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 body {
     background: black;
     color: whitesmoke;
     font-family: monospace;
+}
+
+#root {
+    height: 100%;
 }
